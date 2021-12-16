@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgba(218, 208, 249, 1);
+}
+
+.App {
+  max-width: 980px;
+  min-height: 100vh;
+  margin: auto;
+}
