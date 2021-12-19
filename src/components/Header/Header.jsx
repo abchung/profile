@@ -1,38 +1,33 @@
 import './Header.css';
-import { Link, NavLink } from 'react-router-dom';
 
-//Desktop: 2 sections
+import { useContext } from 'react';
+
+import WindowContext from '../../context/WindowContext';
+
+import HeaderMobile from './HeaderMobile';
+import HeaderDesktop from './HeaderDesktop';
+
+import { Link, NavLink } from 'react-router-dom';
+import { MdLogin } from 'react-icons/md';
+
+//Desktop: 3 sections
 //left:logo
 //center: menu
 //right: login
-//Mobile: 2 sections
+
+//Mobile: 3 sections
 //left: menu
 //center: log
 //right: login
 
-// const menuRoutes = [
-//   {
-//     path: '/',
-//     component: 'Home',
-//   },
-//   {
-//     path: '/projects',
-//     component: 'Projects',
-//   },
-//   {
-//     path: '/about',
-//     component: 'About',
-//   },
-// ];
-
 function Header() {
+  const { windowData } = useContext(WindowContext);
+
   return (
-    <header className="container">
-      <nav>
-        <NavLink to="/about">about</NavLink>
-        <NavLink to="/projects">projects</NavLink>
-      </nav>
-    </header>
+    <div>
+      <h1>inside header</h1>
+      {windowData ? <HeaderDesktop /> : <HeaderMobile />}
+    </div>
   );
 }
 

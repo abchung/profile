@@ -5,11 +5,11 @@
 }
 
 body {
-  background-color: rgba(218, 208, 249, 1);
+  background-color: #ffffff;
 }
 
 .App {
-  max-width: 980px;
+  max-width: 1920px;
   min-height: 100vh;
   margin: auto;
 }
